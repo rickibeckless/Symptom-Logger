@@ -26,8 +26,11 @@ export function Symptom() {
 
     return (
         <>
-            <h1>{symptom.Symptom}</h1>
-            <p>{symptom.Description}</p>
+            <h1 className="page-title">{symptom?.Symptom}</h1>
+            <p className="symptom-description">{symptom?.Description}</p>
+            {symptom?.Severity && <p>Severity: {symptom.Severity}</p>}
+            {symptom?.Duration && <p>Duration: {symptom.Duration}</p>}
+            {symptom?.Priority && <p>Priority: {symptom.Priority}</p>}
             <Link to={`/symptoms/${id}/edit`}>Edit</Link>
         </>
     )

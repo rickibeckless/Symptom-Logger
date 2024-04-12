@@ -65,7 +65,7 @@ export function EditSymptom() {
 
     return (
         <div>
-            <h1>Edit {symptom?.Symptom}</h1>
+            <h1 className="page-title">Edit {symptom?.Symptom}</h1>
             <h3>Current Description:</h3>
             <p>{symptom?.Description}</p>
 

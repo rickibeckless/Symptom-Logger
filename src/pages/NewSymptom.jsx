@@ -33,8 +33,8 @@ export function NewSymptom() {
 
     return (
         <div>
-            <h1>Log New Symptom</h1>
-            <p>Add new symptom, behavior, or concern.</p>
+            <h1 className="page-title">Log New Symptom</h1>
+            <p className="page-summary">Add new symptom, behavior, or concern.</p>
             <form onSubmit={handleSubmit}>
                 <div id="symptom-form" className="new-symptom-form">
                     <label>Symptom:</label>

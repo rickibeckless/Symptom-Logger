@@ -1,8 +1,10 @@
 export function Home() {
+
+
     return (
-        <div>
-            <h1>Home</h1>
-            <p>This is the home page</p>
-        </div>
+        <>
+            <h1 className="page-title">Home</h1>
+            <p className="page-summary">This is the home page</p>
+        </>
     )
 };

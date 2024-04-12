@@ -17,4 +17,71 @@
     padding: 1%;
     background-color: #ffffff;
     min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SYMPTOM LIST */
+#symptom-list-symptoms {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vh;
+    justify-items: center;
+}
+
+.symptom-card {
+    margin: 1%;
+    padding: 1vw;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    background-color: #333436;
+    height: 55vh;
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: scroll;
+}
+
+.symptom-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.symptom-card-links {
+    text-decoration: underline;
+    color: #ededed;
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+    transition: font-size 0.4s ease-in-out;
+}
+
+.symptom-card-links:hover {
+    color: #bababa;
+    font-size: 1.95rem;
+}
+
+.symptom-description {
+    color: #ededed;
+    font-size: 1.1rem;
+    text-align: justify;
+    font-weight: 300;
+
+    padding: 5%;  
+}
+
+.symptom-add-info {
+    color: #ededed;
+    font-style: italic;
+    font-weight: 200;
 }
