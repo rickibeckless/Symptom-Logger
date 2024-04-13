@@ -68,7 +68,7 @@ export function EditSymptom() {
             <div className="new-symptom-header">
                 <h1 className="page-title">Edit "{symptom?.Symptom}"</h1>
                 <h3 className="page-summary">Current Description:</h3>
-                <p className="page-summary">{symptom?.Description}</p>                
+                <p className="page-summary symptom-page-description">{symptom?.Description}</p>                
             </div>
 
             <div className="symptom-form-holder">

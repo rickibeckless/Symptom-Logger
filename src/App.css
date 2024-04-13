@@ -291,6 +291,17 @@ button, input, select, option {
     font-size: 1.3rem;
 }
 
+#symptom-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.symptom-page-description {
+    width: 80%;
+    text-align: justify;
+}
+
 #symptom-edit-link {
     color: #333436;
     background-color: #ededed;
