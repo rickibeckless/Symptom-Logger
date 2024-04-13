@@ -174,9 +174,7 @@ export function EditSymptom() {
                     <button className="symptom-form-btn" onClick={handleUpdate}>Update</button>
                     <button className="symptom-form-btn" onClick={handleDelete}>Delete</button>
                 </div>
-
             </div>
         </>
     )
 };
-
