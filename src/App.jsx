@@ -20,10 +20,10 @@ function App() {
         <>
             <nav id="main-navbar">
                 <ul>
-                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/" className="navbar-links">Home</Link></li>
                     {/* <li><Link to="/about">About</Link></li> */}
-                    <li><Link to="/symptoms">Symptoms</Link></li>
-                    <li><Link to="/symptoms/new">New Symptom</Link></li>
+                    <li><Link to="/symptoms" className="navbar-links">Symptoms</Link></li>
+                    <li><Link to="/symptoms/new" className="navbar-links">New Symptom</Link></li>
                 </ul>
             </nav>
 

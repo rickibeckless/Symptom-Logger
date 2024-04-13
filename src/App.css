@@ -1,5 +1,7 @@
+/* MAIN NAVBAR STYLES */
+
 #main-navbar {
-    background-color: #ededed;
+    background-color: #333436;
     border-right: 1px solid #e9ecef;
 
     position: fixed;
@@ -10,12 +12,46 @@
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+#main-navbar ul {
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-links {
+    color: #ededed;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-align: center;
+    padding: .5rem;
+    margin: 1.5rem;
+    display: block;
+    text-decoration: none;
+    transition: font-size 0.4s ease-in-out;
+}
+
+.navbar-links:hover {
+    color: #bababa;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+/* MAIN BODY STYLES */
 
 #main-body {
     margin-left: 15vw;
     padding: 1%;
-    background-color: #ffffff;
+    background-color: #ededed;
     min-height: 100dvh;
 
     display: flex;
@@ -25,20 +61,51 @@
     justify-content: center;
 }
 
+.page-title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #333436;
+    text-transform: capitalize;
+    margin-bottom: 2vh;
+}
+
 /* SYMPTOM LIST */
-#symptom-list-symptoms {
+
+#symptoms-stats-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
     width: 100%;
+    margin: 5vh 0;
+}
+
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #c4c6c9;
+    border: 2px solid #333436;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+#symptom-list-symptoms {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1vh;
     justify-items: center;
+    margin: 1vw;
 }
 
 .symptom-card {
     margin: 1%;
     padding: 1vw;
     border: 1px solid #e9ecef;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #333436;
     height: 55vh;
     width: 72%;
@@ -57,13 +124,15 @@
 }
 
 .symptom-card-links {
-    text-decoration: underline;
+    list-style-type: none;
+    text-decoration: none;
     color: #ededed;
     font-weight: 500;
     font-size: 2rem;
     text-transform: capitalize;
     text-align: center;
     transition: font-size 0.4s ease-in-out;
+    border-bottom: 3px solid #ededed;
 }
 
 .symptom-card-links:hover {
@@ -81,6 +150,7 @@
 }
 
 .symptom-add-info {
+    background-color: #333436;
     color: #ededed;
     font-style: italic;
     font-weight: 200;

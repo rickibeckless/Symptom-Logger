@@ -80,7 +80,8 @@ export function NewSymptom() {
 
                 <div id="priority-form" className="new-symptom-form">
                     <label>Priority:</label>
-                    <select id="priority" name="priority" onChange={(e) => setPriority(e.target.value)} >
+                    <select id="priority" name="priority" onChange={(e) => setPriority(e.target.value)} required >
+                        <option value="" disabled selected>Select Priority</option>
                         <option value="High">High</option>
                         <option value="Medium">Medium</option>
                         <option value="Low">Low</option>
