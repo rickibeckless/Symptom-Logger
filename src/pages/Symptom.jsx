@@ -26,8 +26,10 @@ export function Symptom() {
 
     return (
         <>
-            <h1 className="page-title">{symptom?.Symptom}</h1>
-            <p className="symptom-description">{symptom?.Description}</p>
+            <div id="symptom-summary">
+                <h1 className="page-title">{symptom?.Symptom}</h1>
+                <p className="symptom-description">{symptom?.Description}</p>
+            </div>
             {symptom?.Severity && <p>Severity: {symptom.Severity}</p>}
             {symptom?.Duration && <p>Duration: {symptom.Duration}</p>}
             {symptom?.Priority && <p>Priority: {symptom.Priority}</p>}

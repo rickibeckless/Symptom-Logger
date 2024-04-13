@@ -4,7 +4,7 @@ Submitted by: **Ricki Beckless**
 
 This web app: **The Symptom Logger is a web application designed to help users monitor and manage their health by tracking symptoms, behaviors, and concerns over time. Users can log new symptoms, update existing entries, and view a comprehensive list of their health data.**
 
-Time spent: **10** hours spent in total
+Time spent: **12** hours spent in total
 
 ## Required Features
 

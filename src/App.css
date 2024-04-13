@@ -48,6 +48,10 @@
 
 /* MAIN BODY STYLES */
 
+button, input, select, option {
+    cursor: pointer;
+}
+
 #main-body {
     margin-left: 15vw;
     padding: 1%;
@@ -69,7 +73,7 @@
     margin-bottom: 2vh;
 }
 
-/* SYMPTOM LIST */
+/* SYMPTOM LIST (SymptomList.jsx) STYLES */
 
 #symptoms-stats-holder {
     display: flex;
@@ -104,15 +108,19 @@
 .symptom-card {
     margin: 1%;
     padding: 1vw;
+
     border: 1px solid #e9ecef;
     border-radius: 8px;
     background-color: #333436;
+
     height: 55vh;
     width: 72%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
     overflow: scroll;
 }
 
@@ -154,4 +162,97 @@
     color: #ededed;
     font-style: italic;
     font-weight: 200;
+}
+
+/* NEW SYMPTOM (NewSymptom.jsx) STYLES */
+
+.new-symptom-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.symptom-form-holder {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    border: 3px solid #333436;
+    border-radius: 8px;
+
+    padding: 2%;
+    margin: 5vh 0;
+
+    height: 50vh;
+    width: 30vw;
+}
+
+.new-symptom-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.symptom-form-label {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.symptom-form-options {
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.symptom-form-options > * {
+    width: 100%;
+}
+
+.form-options-text {
+    font-size: 1rem;
+    padding: 2%;
+}
+
+.symptom-form-holder button {
+    width: min-content;
+    padding: 1%;
+    font-size: 1.1rem;
+    color: #ededed;
+    margin-left: auto;
+    border-radius: 5px;
+    background-color: #333436;
+
+    transition: font-size 0.4s ease-in-out;
+}
+
+.symptom-form-holder button:hover {
+    color: #bababa;
+    font-size: 1rem;
+}
+
+.form-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: 0 2%;
+}
+
+
+/* SYMPTOM (Symptom.jsx) STYLES */
+
+#symptom-summary {
+    background-color: #333436;
+    color: #ededed;
+}
+
+#symptom-summary .page-title {
+    color: #ededed;
 }
