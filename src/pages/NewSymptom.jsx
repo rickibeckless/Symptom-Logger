@@ -9,13 +9,14 @@ export function NewSymptom() {
     const [Severity, setSeverity] = useState('');
     const [Duration, setDuration] = useState('');
     const [Priority, setPriority] = useState('');
+    const [Treated, setTreated] = useState(false);
 
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data, error } = await supabase.from('Symptoms').insert([{ Symptom, Description, Severity, Duration, Priority }]);
+            const { data, error } = await supabase.from('Symptoms').insert([{ Symptom, Description, Severity, Duration, Priority, Treated }]);
             if (error) {
                 throw error;
             }
@@ -25,10 +26,15 @@ export function NewSymptom() {
             setSeverity('');
             setDuration('');
             setPriority('');
+            setTreated(false);
             navigate('/symptoms');
         } catch (error) {
             console.error('Error adding symptom:', error.message);
         }
+    };
+
+    const handleCheckboxChange = (e) => {
+        setTreated(e.target.checked);
     };
 
     return (
@@ -38,6 +44,11 @@ export function NewSymptom() {
                 <p className="page-summary">Add new symptom, behavior, or concern.</p>                
             </div>
             <form className="symptom-form-holder" onSubmit={handleSubmit}>
+                <div id="treated-selection" className="new-symptom-form">
+                    <label className="symptom-form-label">Treated:</label>
+                    <input type="checkbox" checked={Treated} onChange={handleCheckboxChange} />
+                </div>
+
                 <div id="symptom-form" className="new-symptom-form">
                     <label className="symptom-form-label">Symptom:</label>
 

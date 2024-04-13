@@ -4,7 +4,7 @@ Submitted by: **Ricki Beckless**
 
 This web app: **The Symptom Logger is a web application designed to help users monitor and manage their health by tracking symptoms, behaviors, and concerns over time. Users can log new symptoms, update existing entries, and view a comprehensive list of their health data.**
 
-Time spent: **16** hours spent in total
+Time spent: **18** hours spent in total
 
 ## Required Features
 
@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 - [ ] A crewmate can be given a category upon creation which restricts their attributes
 - [X] The site displays summary statistics about a user's crew on their crew page 
-- [ ] The site displays a custom "success" metric about a user's crew which changes the look of the crewmate list
+- [X] The site displays a custom "success" metric about a user's crew which changes the look of the crewmate list
 
 ## Video Walkthrough
 

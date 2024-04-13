@@ -52,6 +52,7 @@ export function SymptomList() {
     return (
         <>
             <h1 className="page-title">Symptoms</h1>
+            
             <div id="symptoms-stats-holder">
                 <div id="total-symptoms-logged" className="stats-card">
                     <h3>Total Symptoms Logged:</h3>
@@ -71,9 +72,10 @@ export function SymptomList() {
                 </div>
             </div>
             <div id="symptom-list-symptoms">
-                {symptoms.map(symptom => (
-                    <div className="symptom-card">
+                {symptoms.slice().reverse().map(symptom => (
+                    <div className={`symptom-card ${symptom.Treated ? 'treated-card' : ''}`} key={symptom.id}>
                         <div className="symptom-info">
+                            {symptom.Treated && <p className="symptom-treated">Treated!</p>}
                             <Link key={symptom.id} to={`/symptoms/${symptom.id}/${encodeURIComponent(symptom.Symptom)}`} className="symptom-card-links">{symptom.Symptom}</Link>
                             <p className="symptom-description">{symptom?.Description}</p>
                         </div>

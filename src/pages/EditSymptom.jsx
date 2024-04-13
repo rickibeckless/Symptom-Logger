@@ -12,6 +12,7 @@ export function EditSymptom() {
     const [editedSeverity, setEditedSeverity] = useState('');
     const [editedDuration, setEditedDuration] = useState('');
     const [editedPriority, setEditedPriority] = useState('');
+    const [editedTreated, setEditedTreated] = useState(false);
 
     const fetchSymptom = async () => {
         try {
@@ -25,6 +26,7 @@ export function EditSymptom() {
             if (!editedSeverity) setEditedSeverity(data?.Severity || '');
             if (!editedDuration) setEditedDuration(data?.Duration || '');
             if (!editedPriority) setEditedPriority(data?.Priority || '');
+            if (!editedTreated) setEditedTreated(data?.Treated || false);
         } catch (error) {
             console.error('Error fetching symptom:', error.message);
         }
@@ -36,12 +38,25 @@ export function EditSymptom() {
 
     const navigate = useNavigate();
 
+    const handleCheckboxChange = (e) => {
+        setEditedTreated(e.target.checked);
+    };
+
     const handleUpdate = async () => {
         try {
-            const { error } = await supabase.from('Symptoms').update({ Symptom: editedSymptom, Description: editedDescription, Severity: editedSeverity, Duration: editedDuration, Priority: editedPriority }).eq('id', id);
+            const { error } = await supabase.from('Symptoms').update({ 
+                Symptom: editedSymptom, 
+                Description: editedDescription, 
+                Severity: editedSeverity, 
+                Duration: editedDuration, 
+                Priority: editedPriority,
+                Treated: editedTreated
+            }).eq('id', id);
+
             if (error) {
                 throw error;
             }
+
             await fetchSymptom();
             console.log('Symptom updated successfully');
             navigate('/symptoms');
@@ -63,15 +78,31 @@ export function EditSymptom() {
         }
     };
 
+    const handleBack = () => {
+        navigate(`/symptoms/${id}/${symptom?.Symptom}`);
+    };
+
     return (
         <>
             <div className="new-symptom-header">
                 <h1 className="page-title">Edit "{symptom?.Symptom}"</h1>
                 <h3 className="page-summary">Current Description:</h3>
                 <p className="page-summary symptom-page-description">{symptom?.Description}</p>                
+                <h3 className="page-summary">Current Stats:</h3>
+                <div className="page-summary-stats">
+                    <p className="page-summary symptom-page-description">{symptom?.Treated ? 'Treated,' : ''}</p>
+                    <p className="page-summary symptom-page-description">{symptom?.Severity},</p>
+                    <p className="page-summary symptom-page-description">{symptom?.Duration},</p>
+                    <p className="page-summary symptom-page-description">{symptom?.Priority}</p>
+                </div>
             </div>
 
             <div className="symptom-form-holder">
+                <div id="treated-selection" className="new-symptom-form">
+                    <label className="symptom-form-label">Treated:</label>
+                    <input type="checkbox" checked={editedTreated} onChange={handleCheckboxChange} />
+                </div>
+
                 <div id="symptom-form" className="new-symptom-form">
                     <label className="symptom-form-label">Symptom:</label>
                     
@@ -139,6 +170,7 @@ export function EditSymptom() {
                 </div>
 
                 <div className="edit-symptom-btns">
+                    <button className="symptom-form-btn" onClick={handleBack}>Back</button>
                     <button className="symptom-form-btn" onClick={handleUpdate}>Update</button>
                     <button className="symptom-form-btn" onClick={handleDelete}>Delete</button>
                 </div>
