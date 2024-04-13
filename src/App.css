@@ -46,6 +46,7 @@
     font-weight: 500;
 }
 
+
 /* MAIN BODY STYLES */
 
 button, input, select, option {
@@ -72,6 +73,27 @@ button, input, select, option {
     text-transform: capitalize;
     margin-bottom: 2vh;
 }
+
+
+/* HOME (Home.jsx) STYLES */
+
+#home-page-holder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-page-summary {
+    width: 50%;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
 
 /* SYMPTOM LIST (SymptomList.jsx) STYLES */
 
@@ -164,6 +186,7 @@ button, input, select, option {
     font-weight: 200;
 }
 
+
 /* NEW SYMPTOM (NewSymptom.jsx) STYLES */
 
 .new-symptom-header {
@@ -248,13 +271,44 @@ button, input, select, option {
 
 /* SYMPTOM (Symptom.jsx) STYLES */
 
-#symptom-summary {
+#symptom-summary-holder {
     background-color: #333436;
     color: #ededed;
+    border-radius: 8px;
+    padding: 2%;
+    margin: 5vh 0;
+    height: 50vh;
+    width: 30vw;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#symptom-summary .page-title {
-    color: #ededed;
+#symptom-summary-holder p {
+    font-size: 1.3rem;
+}
+
+#symptom-edit-link {
+    color: #333436;
+    background-color: #ededed;
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    transition: font-size 0.4s ease-in-out;
+    margin-left: auto;
+
+    padding: 1% 2%;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+#symptom-edit-link:hover {
+    color: #000000;
+    font-size: 1.1rem;
 }
 
 

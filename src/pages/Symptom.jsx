@@ -28,12 +28,15 @@ export function Symptom() {
         <>
             <div id="symptom-summary">
                 <h1 className="page-title">{symptom?.Symptom}</h1>
-                <p className="symptom-description">{symptom?.Description}</p>
+                <p className="symptom-page-description">{symptom?.Description}</p>
             </div>
-            {symptom?.Severity && <p>Severity: {symptom.Severity}</p>}
-            {symptom?.Duration && <p>Duration: {symptom.Duration}</p>}
-            {symptom?.Priority && <p>Priority: {symptom.Priority}</p>}
-            <Link to={`/symptoms/${id}/edit`}>Edit</Link>
+            <div id="symptom-summary-holder">
+                {symptom?.Severity && <p>Severity: {symptom.Severity}</p>}
+                {symptom?.Duration && <p>Duration: {symptom.Duration}</p>}
+                {symptom?.Priority && <p>Priority: {symptom.Priority}</p>}
+                <Link id="symptom-edit-link" to={`/symptoms/${id}/edit`}>Edit</Link>                
+            </div>
+
         </>
     )
 };
