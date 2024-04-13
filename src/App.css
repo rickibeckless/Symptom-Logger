@@ -219,7 +219,7 @@ button, input, select, option {
     padding: 2%;
 }
 
-.symptom-form-holder button {
+.symptom-form-btn {
     width: min-content;
     padding: 1%;
     font-size: 1.1rem;
@@ -231,7 +231,7 @@ button, input, select, option {
     transition: font-size 0.4s ease-in-out;
 }
 
-.symptom-form-holder button:hover {
+.symptom-form-btn:hover {
     color: #bababa;
     font-size: 1rem;
 }
@@ -255,4 +255,18 @@ button, input, select, option {
 
 #symptom-summary .page-title {
     color: #ededed;
+}
+
+
+/* EDIT (EditSymptom.jsx) STYLES */
+
+.edit-symptom-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-symptom-btns .symptom-form-btn {
+    margin-left: 0;
 }

@@ -104,7 +104,7 @@ export function NewSymptom() {
                     </div>
                 </div>
                 
-                <button type="submit">Submit</button>
+                <button className="symptom-form-btn" type="submit">Submit</button>
             </form>
         </>
     )
