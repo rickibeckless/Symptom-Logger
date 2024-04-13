@@ -4,7 +4,7 @@ Submitted by: **Ricki Beckless**
 
 This web app: **The Symptom Logger is a web application designed to help users monitor and manage their health by tracking symptoms, behaviors, and concerns over time. Users can log new symptoms, update existing entries, and view a comprehensive list of their health data.**
 
-Time spent: **15** hours spent in total
+Time spent: **16** hours spent in total
 
 ## Required Features
 
@@ -23,15 +23,11 @@ The following **optional** features are implemented:
 - [X] The site displays summary statistics about a user's crew on their crew page 
 - [ ] The site displays a custom "success" metric about a user's crew which changes the look of the crewmate list
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.ibb.co/5BLVysv/Code-Path-Project-Seven-Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with ...  
 [ScreenToGif](https://www.screentogif.com/) for Windows
