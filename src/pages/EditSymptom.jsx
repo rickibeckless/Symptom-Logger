@@ -98,7 +98,7 @@ export function EditSymptom() {
             </div>
 
             <div className="symptom-form-holder">
-                <div id="treated-selection" className="new-symptom-form">
+                <div id="treated-form" className="new-symptom-form">
                     <label className="symptom-form-label">Treated:</label>
                     <input type="checkbox" checked={editedTreated} onChange={handleCheckboxChange} />
                 </div>

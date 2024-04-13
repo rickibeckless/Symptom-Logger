@@ -280,6 +280,12 @@ button, input, select, option {
     margin: 0 2%;
 }
 
+.disabled-symptom-option {
+    opacity: 0.5;
+    pointer-events: none;
+    text-decoration: line-through;
+}
+
 
 /* SYMPTOM (Symptom.jsx) STYLES */
 
@@ -359,8 +365,4 @@ button, input, select, option {
     display: flex;
     flex-direction: row;
     gap: 1vw;
-}
-
-.page-summary-stats p {
-    
 }

@@ -10,6 +10,7 @@ export function NewSymptom() {
     const [Duration, setDuration] = useState('');
     const [Priority, setPriority] = useState('');
     const [Treated, setTreated] = useState(false);
+    const [PastSymptom, setPastSymptom] = useState(false);
 
     const navigate = useNavigate();
 
@@ -37,6 +38,11 @@ export function NewSymptom() {
         setTreated(e.target.checked);
     };
 
+    const handlePastSymptom = (e) => {
+        setPastSymptom(e.target.checked);
+        console.log("Past Symptom selected: ", e.target.checked);
+    }
+
     return (
         <>
             <div className="new-symptom-header">
@@ -44,7 +50,12 @@ export function NewSymptom() {
                 <p className="page-summary">Add new symptom, behavior, or concern.</p>                
             </div>
             <form className="symptom-form-holder" onSubmit={handleSubmit}>
-                <div id="treated-selection" className="new-symptom-form">
+                <div id="past-form" className="new-symptom-form">
+                    <label className="symptom-form-label">Is this a past symptom?</label>
+                    <input type="checkbox" onChange={handlePastSymptom} />
+                </div>
+
+                <div id="treated-form" className="new-symptom-form">
                     <label className="symptom-form-label">Treated:</label>
                     <input type="checkbox" checked={Treated} onChange={handleCheckboxChange} />
                 </div>
@@ -65,7 +76,7 @@ export function NewSymptom() {
                     </div>
                 </div>
                 
-                <div id="severity-form" className="new-symptom-form">
+                <div id="severity-form" className={`new-symptom-form ${PastSymptom ? 'disabled-symptom-option' : ''}`}>
                     <label className="symptom-form-label">Severity:</label>
 
                     <div className="symptom-form-options">
@@ -86,7 +97,7 @@ export function NewSymptom() {
                     </div>
                 </div>
 
-                <div id="duration-form" className="new-symptom-form">
+                <div id="duration-form" className={`new-symptom-form ${PastSymptom ? 'disabled-symptom-option' : ''}`}>
                     <label className="symptom-form-label">Duration:</label>
 
                     <div className="symptom-form-options">
@@ -102,11 +113,11 @@ export function NewSymptom() {
                     </div>
                 </div>
 
-                <div id="priority-form" className="new-symptom-form">
+                <div id="priority-form" className={`new-symptom-form ${PastSymptom ? 'disabled-symptom-option' : ''}`}>
                     <label className="symptom-form-label">Priority:</label>
 
                     <div className="symptom-form-options">
-                        <select id="priority" name="priority" onChange={(e) => setPriority(e.target.value)} required >
+                        <select id="priority" name="priority" onChange={(e) => setPriority(e.target.value)} {...(PastSymptom ? {} : { required: true })} >
                             <option value="" disabled selected>Select Priority</option>
                             <option value="High">High</option>
                             <option value="Medium">Medium</option>
