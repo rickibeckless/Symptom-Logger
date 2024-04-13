@@ -29,6 +29,8 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://i.ibb.co/Cbk6RN2/Code-Path-Project-Seven-Walkthrough-Longv2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+GIF also found at [Symptom Logger](https://i.ibb.co/Cbk6RN2/Code-Path-Project-Seven-Walkthrough-Longv2.gif) on ImgBB
+
 GIF created with ...  
 [ScreenToGif](https://www.screentogif.com/) for Windows
 
